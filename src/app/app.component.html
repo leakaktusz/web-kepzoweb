@@ -1,0 +1,30 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-menu (selectedPage)="changePage($event)" [currentPage]="page" *ngIf="page" (onCloseSidenav)="onClose($event, sidenav)"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div >
+        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div >Képzőművészeti webshop</div>
+      <div  fxFlex  fxLayout fxLayoutAlign="flex-end" >
+        <ul  fxLayout fxLayoutGap="50px" class="navigation-items">
+          <li *ngIf="!(loggedInUser)"><a routerLink="/login">Login</a></li>
+
+          <li *ngIf="loggedInUser"><a routerLink="/login" (click)="logout()">Logout</a></li>
+          <li><a routerLink="/signup">Register</a></li>
+          <li><a routerLink="/main">Main</a></li>
+          <li><a routerLink="/gallery">Gallery</a></li>
+          <li><a routerLink="/shopping">Shopping</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+        <button mat-icon-button  class="shop">
+          <mat-icon  routerLink="/cart">shopping_cart</mat-icon>
+        </button>      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kepzomuvesz-webshop": {
+      "hosting": {
+        "week-04": [
+          "kepzomuvesz-webshop"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kepzomuvesz-webshop"
+  }
+}

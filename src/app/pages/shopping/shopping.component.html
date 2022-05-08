@@ -1,0 +1,23 @@
+
+    <div class="content">
+        <div  fxLayout="row wrap"  >
+    <div  *ngFor="let img of galleryObject">
+       
+        <mat-card class="cards">
+           <mat-card-header >
+               <mat-card-title>
+               {{img.photo_name}}
+            </mat-card-title>
+            </mat-card-header>        
+             <img mat-card-image class="galleryImage" src="assets/{{img.id}}.jpg" /> 
+
+        <mat-card-content>
+        <p>{{img.user_name}}</p>
+    </mat-card-content>
+    <mat-card-actions class="fav">
+        <button  mat-icon-button >
+            <mat-icon >favorite</mat-icon>
+        </button>
+    </mat-card-actions>
+    </mat-card>
+    </div></div>

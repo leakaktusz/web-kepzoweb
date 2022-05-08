@@ -1,0 +1,32 @@
+
+
+.galleryImage {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    
+}
+
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cards{
+    width: 300px;
+    height: 600px;
+    margin: 20px;
+}
+
+.fav{margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
